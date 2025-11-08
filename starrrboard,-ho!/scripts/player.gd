@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var acceleration := 10
 @export var max_speed := 350
 @export var rotation_speed :=200
+@onready var camera_2d: Camera2D = $Camera2D
 
 func _physics_process(delta: float) -> void:
 	
