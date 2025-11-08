@@ -1,12 +1,17 @@
 extends CollisionObject2D
 # Author: Carter Horton
 # Date: 11 - 8 - 2025
-# Title: Scraps script
-# Description:
+# Title: Scraps
+# Description: Moves the whole body around the screen
 # ----- Settings -----
 @export var scrapSpeed: float = 40.0 # Variable speed controler
 @export var maxVals: Vector2 = Vector2(1280,720) # Maximum value numbers
 @export var minVals: Vector2 = Vector2(0,0) # Minumum value numbers
+@export var custom_Texture: Texture2D:
+	set(value):
+		$SpriteTexture.texture = value
+		custom_Texture = value
+
 # ----- Variables ------
 var target: Vector2 # Refrence variable for where the peice is going
 var rng = RandomNumberGenerator.new() # OS time to create random ints
@@ -40,6 +45,7 @@ func moveToTarget(delta: float) -> void:
 	else:
 		global_position += direction * distanceThisFrame # Add to globalposition
 
+# This function runs on every single frame and passes delta as time since last
 func _process(delta: float) -> void:
 	moveToTarget(delta)
 	
