@@ -24,6 +24,7 @@ custom_Texture = ExtResource("4_iywne")
 
 [node name="Scrap2" parent="Scraps" instance=ExtResource("3_lnu2h")]
 position = Vector2(-55, 159)
+scrapValue = 5
 custom_Texture = ExtResource("5_p57ef")
 
 [node name="Scrap3" parent="Scraps" instance=ExtResource("3_lnu2h")]
@@ -32,6 +33,7 @@ custom_Texture = ExtResource("4_iywne")
 
 [node name="Scrap4" parent="Scraps" instance=ExtResource("3_lnu2h")]
 position = Vector2(96, -10)
+scrapValue = 3
 custom_Texture = ExtResource("5_iywne")
 
 [node name="Scrap5" parent="Scraps" instance=ExtResource("3_lnu2h")]
@@ -40,12 +42,15 @@ custom_Texture = ExtResource("4_iywne")
 
 [node name="Scrap6" parent="Scraps" instance=ExtResource("3_lnu2h")]
 position = Vector2(-204, 17)
+scrapValue = 5
 custom_Texture = ExtResource("5_p57ef")
 
 [node name="Scrap7" parent="Scraps" instance=ExtResource("3_lnu2h")]
 position = Vector2(182, 90)
+scrapValue = 3
 custom_Texture = ExtResource("5_iywne")
 
 [node name="Scrap8" parent="Scraps" instance=ExtResource("3_lnu2h")]
 position = Vector2(-230, -93)
+scrapValue = 5
 custom_Texture = ExtResource("5_p57ef")

@@ -7,6 +7,7 @@ extends Area2D
 @export var scrapSpeed: float = 40.0 # Variable speed controler
 @export var maxVals: Vector2 = Vector2(1280,-720) # Maximum value numbers
 @export var minVals: Vector2 = Vector2(-1280,720) # Minumum value numbers
+@export var scrapValue: int = 2
 @export var custom_Texture: Texture2D:
 	set(value):
 		$SpriteTexture.texture = value
@@ -49,6 +50,7 @@ func _process(delta: float) -> void:
 
 # This detects for the player body to collide with scraps
 func _on_body_entered(body: Node2D) -> void:
-	gameManager.addPoint()
+	gameManager.addPoint(scrapValue)
 	queue_free()
+	
 	pass # Replace with function body.
