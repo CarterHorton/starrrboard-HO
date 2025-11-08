@@ -47,6 +47,7 @@ func moveToTarget(delta: float) -> void:
 func _process(delta: float) -> void:
 	moveToTarget(delta)
 
-func _on_area_entered(area: Area2D) -> void:
-	print("collided")
+# This detects for the player body to collide with scraps
+func _on_body_entered(body: Node2D) -> void:
+	print("collision")
 	pass # Replace with function body.
