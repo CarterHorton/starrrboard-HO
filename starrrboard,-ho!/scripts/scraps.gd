@@ -7,11 +7,17 @@ extends Area2D
 @export var scrapSpeed: float = 40.0 # Variable speed controler
 @export var maxVals: Vector2 = Vector2(1280,-720) # Maximum value numbers
 @export var minVals: Vector2 = Vector2(-1280,720) # Minumum value numbers
-@export var scrapValue: int = 2
+@export var scrapValue: int = 2 # Holds the value of the scrap
+# variable for the texture
 @export var custom_Texture: Texture2D:
 	set(value):
 		$SpriteTexture.texture = value
 		custom_Texture = value
+# Variables for Timer
+var timeoutFor:float = 5.0
+@onready var timer = $Timer
+var hittable = true
+
 @onready var gameManager = %GameManager
 # ----- Variables ------
 var target: Vector2 # Refrence variable for where the peice is going
@@ -24,7 +30,9 @@ func pickTarget() -> void:
 		rng.randf_range(minVals.y, maxVals.y)
 	)
 
+# Runs as soon as the scene is loaded
 func _on_ready() -> void:
+	timer.one_shot = true
 	rng.randomize() # Instanciate a random capture
 	pickTarget() # Pick a target to approach
 	global_position = target
@@ -50,7 +58,17 @@ func _process(delta: float) -> void:
 
 # This detects for the player body to collide with scraps
 func _on_body_entered(body: Node2D) -> void:
-	gameManager.addPoint(scrapValue)
-	queue_free()
-	
-	pass # Replace with function body.
+	if hittable:
+		gameManager.addPoint(scrapValue)
+		print("Dropkicking child")
+		timer.wait_time = timeoutFor
+		timer.start()
+		hittable = false
+		visible = false
+
+func _on_timer_timeout() -> void:
+	print("timer ran out")
+	hittable = true
+	visible = true
+	pickTarget()
+	global_position = target
