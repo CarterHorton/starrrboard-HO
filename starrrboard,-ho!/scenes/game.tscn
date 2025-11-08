@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpf66xjmf73s2"]
+[gd_scene load_steps=8 format=3 uid="uid://cpf66xjmf73s2"]
 
+[ext_resource type="Script" uid="uid://cykq02oo3irg7" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cs04s23q5dicv" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://cpq10lsr3g175" path="res://scenes/Scraps.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://6whstg5q2f0v" path="res://assets/ScrapTexture1.png" id="4_iywne"]
@@ -9,12 +10,20 @@
 
 [node name="game" type="Node2D"]
 position = Vector2(642, 356)
+script = ExtResource("1_u5sy4")
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("6_p57ef")
 
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
+
+[node name="Label" type="Label" parent="player"]
+offset_left = -623.0
+offset_top = -341.0
+offset_right = -404.0
+offset_bottom = -237.0
+text = "Current Value: 0$"
 
 [node name="Scraps" type="Node2D" parent="."]
 
@@ -49,3 +58,5 @@ custom_Texture = ExtResource("5_iywne")
 [node name="Scrap8" parent="Scraps" instance=ExtResource("3_lnu2h")]
 position = Vector2(-230, -93)
 custom_Texture = ExtResource("5_p57ef")
+
+[node name="lasers" type="Node" parent="."]
