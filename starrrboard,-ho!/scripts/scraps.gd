@@ -1,5 +1,8 @@
 extends CollisionObject2D
-
+# Author: Carter Horton
+# Date: 11 - 8 - 2025
+# Title: Scraps script
+# Description:
 # ----- Settings -----
 @export var scrapSpeed: float = 40.0 # Variable speed controler
 @export var maxVals: Vector2 = Vector2(1280,720) # Maximum value numbers
@@ -17,17 +20,34 @@ func pickTarget() -> void:
 	# Print the location to terminal
 	print("Target is: ", target)
 
-
 func _on_ready() -> void:
 	rng.randomize() # Instanciate a random capture
 	pickTarget() # Pick a target to approach
-	# Note: The below should be made into a function at some point
-	# Pick a random x value on the given plane
-	
-	# Pick a random y value on the given plane
-	
-	# route the scraps to that point
-	
-	
-	
 	pass # Replace with function body.
+
+# Move to new frame (RUN IN _process)
+func moveToTarget(delta: float) -> void:
+	# ----- Find Point -----
+	var direction = (target - global_position).normalized()
+	var distanceThisFrame = scrapSpeed * delta
+	if global_position.distance_to(target) <= distanceThisFrame:
+		global_position = target
+		pickTarget()
+	else:
+		global_position += direction * distanceThisFrame
+
+func _process(delta: float) -> void:
+	moveToTarget(delta)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
