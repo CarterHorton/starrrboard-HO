@@ -1,7 +1,49 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs04s23q5dicv"]
+[gd_scene load_steps=11 format=3 uid="uid://cs04s23q5dicv"]
 
-[ext_resource type="Texture2D" uid="uid://bxb8qc6n243i2" path="res://assets/betaShip.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cnyvr5xqdv8je" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://cuk6uea5kniqo" path="res://assets/PlayerShip_Default.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://haelgge0bdgm" path="res://assets/Better_Thruster_SpriteSheet.png" id="3_qhqgy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smehm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}],
+"loop": true,
+"name": &"thrusting",
+"speed": 13.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
 radius = 7.499999
@@ -15,8 +57,16 @@ height = 34.0
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_3vyb7")
+position = Vector2(-1, -2.842171e-14)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_g2els")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+position = Vector2(15, 273.778)
+scale = Vector2(1.05, 1.05)
+sprite_frames = SubResource("SpriteFrames_smehm")
+animation = &"thrusting"
+frame_progress = 0.8337896
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.99999905)
@@ -29,5 +79,9 @@ ignore_rotation = false
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_qhqgy")
 debug_color = Color(0.5997842, 0.37007573, 1, 0.41960785)
+
+[node name="gun" type="Node2D" parent="."]
+position = Vector2(0, -24)
