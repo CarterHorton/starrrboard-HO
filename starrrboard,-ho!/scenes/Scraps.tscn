@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpq10lsr3g175"]
 
-[ext_resource type="Texture2D" uid="uid://6whstg5q2f0v" path="res://assets/ScrapTexture1.png" id="1_5ns3t"]
 [ext_resource type="Script" uid="uid://w0m3agahly1l" path="res://scripts/scraps.gd" id="1_vh33x"]
+[ext_resource type="Texture2D" uid="uid://bwrqkqx3vm210" path="res://assets/ScrapTexture3.png" id="2_vh33x"]
 
 [sub_resource type="GDScript" id="GDScript_vh33x"]
 script/source = "extends Sprite2D
@@ -23,21 +23,24 @@ func _process(delta: float) -> void:
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbkj0"]
-radius = 350.0
+radius = 951.3149
 
 [node name="Scrap" type="Area2D" groups=["Scrap"]]
 scale = Vector2(0.02, 0.02)
 collision_layer = 4
-collision_mask = 4
+collision_mask = 5
 script = ExtResource("1_vh33x")
 
 [node name="SpriteTexture" type="Sprite2D" parent="."]
-texture = ExtResource("1_5ns3t")
+position = Vector2(292.875, 100.93756)
+scale = Vector2(2.2115583, 2.0335648)
+texture = ExtResource("2_vh33x")
 script = SubResource("GDScript_vh33x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-250, -50)
+position = Vector2(150, 50)
 shape = SubResource("CircleShape2D_qbkj0")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="ready" from="." to="." method="_on_ready"]

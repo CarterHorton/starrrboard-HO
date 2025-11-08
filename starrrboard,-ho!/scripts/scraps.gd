@@ -5,13 +5,13 @@ extends Area2D
 # Description: Moves the whole body around the screen
 # ----- Settings -----
 @export var scrapSpeed: float = 40.0 # Variable speed controler
-@export var maxVals: Vector2 = Vector2(1280,720) # Maximum value numbers
-@export var minVals: Vector2 = Vector2(0,0) # Minumum value numbers
+@export var maxVals: Vector2 = Vector2(1280,-720) # Maximum value numbers
+@export var minVals: Vector2 = Vector2(-1280,720) # Minumum value numbers
 @export var custom_Texture: Texture2D:
 	set(value):
 		$SpriteTexture.texture = value
 		custom_Texture = value
-
+@onready var gameManager = %GameManager
 # ----- Variables ------
 var target: Vector2 # Refrence variable for where the peice is going
 var rng = RandomNumberGenerator.new() # OS time to create random ints
@@ -47,6 +47,8 @@ func moveToTarget(delta: float) -> void:
 func _process(delta: float) -> void:
 	moveToTarget(delta)
 
-func _on_area_entered(area: Area2D) -> void:
-	print("collided")
+# This detects for the player body to collide with scraps
+func _on_body_entered(body: Node2D) -> void:
+	gameManager.addPoint()
+	queue_free()
 	pass # Replace with function body.
