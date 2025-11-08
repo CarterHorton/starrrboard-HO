@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpf66xjmf73s2"]
+
+[ext_resource type="PackedScene" uid="uid://cs04s23q5dicv" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" path="res://scenes/camera.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cpq10lsr3g175" path="res://scenes/Scraps.tscn" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://6whstg5q2f0v" path="res://assets/ScrapTexture1.png" id="4_iywne"]
+[ext_resource type="Texture2D" uid="uid://3mklcukacxy8" path="res://assets/ScrapTexture2.png" id="5_p57ef"]
+
+[node name="game" type="Node2D"]
+position = Vector2(642, 356)
+
+[node name="player" parent="." instance=ExtResource("1_uwrxv")]
+
+[node name="camera" parent="player" instance=ExtResource("2_yqjtg")]
+position = Vector2(-2, 4)
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+
+[node name="Scraps" type="Node2D" parent="."]
+
+[node name="Scrap" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(121, 233)
+custom_Texture = ExtResource("4_iywne")
+
+[node name="Scrap2" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(-55, 159)
+custom_Texture = ExtResource("5_p57ef")
+
+[node name="Scrap3" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(49, -99)
+custom_Texture = ExtResource("4_iywne")
+
+[node name="Scrap4" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(96, -10)
+custom_Texture = ExtResource("5_p57ef")
+
+[node name="Scrap5" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(-61, -147)
+custom_Texture = ExtResource("4_iywne")
+
+[node name="Scrap6" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(-204, 17)
+custom_Texture = ExtResource("5_p57ef")
+
+[node name="Scrap7" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(182, 90)
+custom_Texture = ExtResource("4_iywne")
+
+[node name="Scrap8" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(-230, -93)
+custom_Texture = ExtResource("5_p57ef")
