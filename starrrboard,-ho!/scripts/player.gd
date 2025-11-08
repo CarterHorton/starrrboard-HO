@@ -1,10 +1,14 @@
 extends CharacterBody2D
 
+#signal laser_shot(laser)
+
 @export var acceleration := 10
 @export var max_speed := 350
 @export var rotation_speed :=200
 @onready var camera_2d: Camera2D = $Camera2D
+@onready var gun = $gun
 
+var laser_scene = preload("res://scenes/laser.tscn")
 func _physics_process(delta: float) -> void:
 	
 	var input_vector := Vector2(0,Input.get_axis("move_forward","move_backward"))

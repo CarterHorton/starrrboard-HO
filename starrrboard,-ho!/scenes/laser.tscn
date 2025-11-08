@@ -1,3 +1,22 @@
-[gd_scene format=3 uid="uid://eo1idslvjtpp"]
+[gd_scene load_steps=4 format=3 uid="uid://eo1idslvjtpp"]
+
+[ext_resource type="Script" uid="uid://bojbaeurwbub0" path="res://scripts/laser.gd" id="1_a7dhc"]
+[ext_resource type="Texture2D" uid="uid://bjr1uaro5xamc" path="res://assets/CannonBall.png" id="1_xmihv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a7dhc"]
+radius = 62.0
 
 [node name="laser" type="Area2D"]
+script = ExtResource("1_a7dhc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, -23)
+texture = ExtResource("1_xmihv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, -67)
+shape = SubResource("CircleShape2D_a7dhc")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

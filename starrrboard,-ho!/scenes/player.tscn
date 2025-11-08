@@ -32,3 +32,6 @@ ignore_rotation = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_qhqgy")
 debug_color = Color(0.5997842, 0.37007573, 1, 0.41960785)
+
+[node name="gun" type="Node2D" parent="."]
+position = Vector2(0, -24)
