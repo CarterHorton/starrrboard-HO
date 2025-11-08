@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbkj0"]
-radius = 350.0
+radius = 951.3149
 
 [node name="Scrap" type="Area2D" groups=["Scrap"]]
 scale = Vector2(0.02, 0.02)
@@ -32,13 +32,13 @@ collision_mask = 5
 script = ExtResource("1_vh33x")
 
 [node name="SpriteTexture" type="Sprite2D" parent="."]
-position = Vector2(-1.5258789e-05, 1.5258789e-05)
-scale = Vector2(1.4937239, 1.6111112)
+position = Vector2(292.875, 100.93756)
+scale = Vector2(2.2115583, 2.0335648)
 texture = ExtResource("2_vh33x")
 script = SubResource("GDScript_vh33x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-150, -50)
+position = Vector2(150, 50)
 shape = SubResource("CircleShape2D_qbkj0")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
