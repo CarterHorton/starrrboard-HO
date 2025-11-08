@@ -11,7 +11,7 @@ height = 37.5
 radius = 7.0
 height = 34.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -22,6 +22,9 @@ texture = ExtResource("1_3vyb7")
 position = Vector2(0, 0.99999905)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+ignore_rotation = false
 
 [node name="Area2D" type="Area2D" parent="."]
 
