@@ -19,10 +19,3 @@ func _physics_process(delta: float) -> void:
 	
 
 	move_and_slide()
-
-
-	var screen_size=get_viewport_rect().size
-	if global_position.y < 0:
-		global_position.y=screen_size.y
-	elif global_position.y >screen_size.y:
-		global_position.y=0
