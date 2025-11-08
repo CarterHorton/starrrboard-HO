@@ -22,8 +22,6 @@ func pickTarget() -> void:
 		rng.randf_range(minVals.x, maxVals.x),
 		rng.randf_range(minVals.y, maxVals.y)
 	)
-	# Print the location to terminal
-	print("Target is: ", target)
 
 func _on_ready() -> void:
 	rng.randomize() # Instanciate a random capture
