@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cs04s23q5dicv"]
 
-[ext_resource type="Texture2D" uid="uid://bxb8qc6n243i2" path="res://assets/betaShip.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cnyvr5xqdv8je" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://cuk6uea5kniqo" path="res://assets/PlayerShip_Default.png" id="2_g2els"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
 radius = 7.499999
@@ -15,8 +15,9 @@ height = 34.0
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_3vyb7")
+position = Vector2(-1, -2.842171e-14)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.99999905)
