@@ -23,18 +23,22 @@ func pickTarget() -> void:
 func _on_ready() -> void:
 	rng.randomize() # Instanciate a random capture
 	pickTarget() # Pick a target to approach
+	global_position = target
 	pass # Replace with function body.
 
 # Move to new frame (RUN IN _process)
 func moveToTarget(delta: float) -> void:
 	# ----- Find Point -----
+	# Find direction by normalizing the difference
 	var direction = (target - global_position).normalized()
+	# Use delta so that the speed accounts for the frame
 	var distanceThisFrame = scrapSpeed * delta
+	# if the object would travel past the distance to target
 	if global_position.distance_to(target) <= distanceThisFrame:
-		global_position = target
-		pickTarget()
+		global_position = target # Set the position to the target position
+		pickTarget() # Pick a new target to travel to
 	else:
-		global_position += direction * distanceThisFrame
+		global_position += direction * distanceThisFrame # Add to globalposition
 
 func _process(delta: float) -> void:
 	moveToTarget(delta)
