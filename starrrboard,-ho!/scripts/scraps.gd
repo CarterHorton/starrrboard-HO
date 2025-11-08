@@ -1,4 +1,4 @@
-extends CollisionObject2D
+extends Area2D
 # Author: Carter Horton
 # Date: 11 - 8 - 2025
 # Title: Scraps
@@ -46,16 +46,7 @@ func moveToTarget(delta: float) -> void:
 # This function runs on every single frame and passes delta as time since last
 func _process(delta: float) -> void:
 	moveToTarget(delta)
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+func _on_area_entered(area: Area2D) -> void:
+	print("collided")
+	pass # Replace with function body.
