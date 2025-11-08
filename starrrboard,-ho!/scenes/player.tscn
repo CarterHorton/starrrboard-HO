@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cs04s23q5dicv"]
+[gd_scene load_steps=5 format=3 uid="uid://cs04s23q5dicv"]
 
 [ext_resource type="Texture2D" uid="uid://bxb8qc6n243i2" path="res://assets/betaShip.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cnyvr5xqdv8je" path="res://scripts/player.gd" id="1_g2els"]
@@ -7,7 +7,11 @@
 radius = 7.499999
 height = 37.5
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
+radius = 7.0
+height = 34.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -19,5 +23,8 @@ position = Vector2(0, 0.99999905)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("CapsuleShape2D_g2els")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-ignore_rotation = false
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_qhqgy")
+debug_color = Color(0.5997842, 0.37007573, 1, 0.41960785)
