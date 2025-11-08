@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bxb8qc6n243i2" path="res://assets/betaShip.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cnyvr5xqdv8je" path="res://scripts/player.gd" id="1_g2els"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
-radius = 12.5
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
+radius = 7.499999
+height = 37.5
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
@@ -14,11 +15,6 @@ scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6.9999995)
+position = Vector2(0, 0.99999905)
 scale = Vector2(0.8, 0.8)
-shape = SubResource("CircleShape2D_g2els")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(1.1920929e-07, 8)
-scale = Vector2(0.64000005, 0.64000005)
-shape = SubResource("CircleShape2D_g2els")
+shape = SubResource("CapsuleShape2D_g2els")
