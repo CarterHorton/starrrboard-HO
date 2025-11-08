@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpf66xjmf73s2"]
 
 [ext_resource type="PackedScene" uid="uid://cs04s23q5dicv" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://di0atnat0n2c" path="res://scenes/camera.tscn" id="2_yqjtg"]
-[ext_resource type="PackedScene" path="res://scenes/Scraps.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" path="res://scenes/camera.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cpq10lsr3g175" path="res://scenes/Scraps.tscn" id="3_lnu2h"]
 
 [node name="game" type="Node2D"]
 position = Vector2(640, 360)
