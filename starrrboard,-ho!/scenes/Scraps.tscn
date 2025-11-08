@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpq10lsr3g175"]
+
+[ext_resource type="Texture2D" uid="uid://6whstg5q2f0v" path="res://assets/ScrapTexture1.png" id="1_5ns3t"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_5ns3t"]
+points = PackedVector2Array(501, -128, -365, 312, -920, -214, -436, -377)
+
+[node name="Scrap" type="CharacterBody2D"]
+scale = Vector2(0.02, 0.02)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5ns3t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_5ns3t")

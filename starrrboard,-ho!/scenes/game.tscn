@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpf66xjmf73s2"]
+[gd_scene load_steps=4 format=3 uid="uid://cpf66xjmf73s2"]
 
 [ext_resource type="PackedScene" uid="uid://cs04s23q5dicv" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="PackedScene" uid="uid://di0atnat0n2c" path="res://scenes/camera.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" path="res://scenes/camera.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cpq10lsr3g175" path="res://scenes/Scraps.tscn" id="3_lnu2h"]
 
 [node name="game" type="Node2D"]
 position = Vector2(640, 360)
@@ -11,3 +12,20 @@ position = Vector2(640, 360)
 [node name="camera" parent="player" instance=ExtResource("2_yqjtg")]
 position = Vector2(-2, 4)
 position_smoothing_enabled = true
+
+[node name="Scraps" type="Node2D" parent="."]
+
+[node name="Scrap" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(121, 233)
+
+[node name="Scrap2" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(-55, 159)
+
+[node name="Scrap3" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(49, -99)
+
+[node name="Scrap4" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(96, -10)
+
+[node name="Scrap5" parent="Scraps" instance=ExtResource("3_lnu2h")]
+position = Vector2(-61, -147)
