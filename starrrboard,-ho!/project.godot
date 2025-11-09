@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Starrrboard, Ho!"
-run/main_scene="uid://cpf66xjmf73s2"
+run/main_scene="uid://csddwvmma3fsx"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-BackgroundMusic="*res://scenes/background_music.tscn"
+BackgroundMusic="res://scenes/background_music.tscn"
+MusicManager="*res://scripts/music_manager.tscn"
 
 [display]
 
