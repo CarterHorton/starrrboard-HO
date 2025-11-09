@@ -1,8 +1,8 @@
 extends Control
 
 #establish variables
-@onready var player: CharacterBody2D = $player		#makes access to player node
-@onready var game_manager: Node = %GameManager
+@onready var player: CharacterBody2D = $player
+var game_manager = GameManager
 var fireAdd = 3
 var fireBase = 5
 var speedAdd = 3
@@ -27,6 +27,7 @@ func _on_ship_pressed() -> void:
 
 func _on_blackhole_pressed() -> void:
 	pass # Replace with function body.
+
 
 
 func _on_exit_pressed() -> void:
