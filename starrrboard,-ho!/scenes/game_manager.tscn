@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4m7t30w32wjh"]
+
+[ext_resource type="Script" uid="uid://cj4it1iguw2w0" path="res://scripts/game_manager.gd" id="1_glms7"]
+[ext_resource type="Texture2D" uid="uid://dpnj4f8et0oia" path="res://assets/pictures/SpaceTexture.png" id="2_udu3i"]
+
+[node name="GameManager" type="Node"]
+unique_name_in_owner = true
+script = ExtResource("1_glms7")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+z_index = -50
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(648, 374)
+repeat_size = Vector2(1920, 1080)
+repeat_times = 13
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+texture = ExtResource("2_udu3i")

@@ -11,7 +11,7 @@ func _physics_process(delta: float) -> void:
 
 #this function waits until the audio plays, then deletes the instance of the node
 func _on_visible_on_screen_notifier_2d_screen_exited():
-	await get_tree().create_timer(1.5-animation_player.current_animation_length).timeout     
+	await get_tree().create_timer(.5).timeout     
 	queue_free()
 
 
