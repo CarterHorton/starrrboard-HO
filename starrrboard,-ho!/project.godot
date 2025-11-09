@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Starrrboard, Ho!"
-run/main_scene="uid://cpf66xjmf73s2"
+run/main_scene="uid://csddwvmma3fsx"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-BackgroundMusic="*res://scenes/background_music.tscn"
+BackgroundMusic="res://scenes/background_music.tscn"
+MusicManager="*res://scripts/music_manager.tscn"
 
 [display]
 
@@ -58,8 +59,8 @@ shoot={
 
 [layer_names]
 
-2d_physics/layer_1="BackgroundFar"
-2d_physics/layer_2="BackgroundClose"
+2d_physics/layer_1="Background"
+2d_physics/layer_2="HQ"
 2d_physics/layer_3="Scraps"
 2d_physics/layer_4="Asteroids"
 2d_physics/layer_5="laser"
