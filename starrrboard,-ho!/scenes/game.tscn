@@ -5,12 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://dpnj4f8et0oia" path="res://assets/pictures/SpaceTexture.png" id="3_gee14"]
 [ext_resource type="PackedScene" uid="uid://cpq10lsr3g175" path="res://scenes/Scraps.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://6whstg5q2f0v" path="res://assets/pictures/ScrapTexture1.png" id="4_iywne"]
-[ext_resource type="PackedScene" uid="uid://cotaeqdjxs5hk" path="res://scenes/ping.tscn" id="5_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://cotaeqdjxs5hk" path="res://scenes/Pings/ping.tscn" id="5_0tnpc"]
 [ext_resource type="Texture2D" uid="uid://bwrqkqx3vm210" path="res://assets/pictures/ScrapTexture3.png" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://3mklcukacxy8" path="res://assets/pictures/ScrapTexture2.png" id="5_p57ef"]
-[ext_resource type="PackedScene" uid="uid://hbpn0qhed63t" path="res://scenes/pingHub.tscn" id="6_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://hbpn0qhed63t" path="res://scenes/Pings/pingHub.tscn" id="6_kvpfn"]
 [ext_resource type="Script" uid="uid://cj4it1iguw2w0" path="res://scenes/game_manager.gd" id="6_p57ef"]
-[ext_resource type="PackedScene" path="res://scenes/hub.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://d2fskun5yn1e2" path="res://scenes/hub.tscn" id="9_0tnpc"]
 
 [node name="game" type="Node2D"]
 position = Vector2(642, 356)
