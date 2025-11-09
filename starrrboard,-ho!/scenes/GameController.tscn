@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpf66xjmf73s2"]
+[gd_scene load_steps=5 format=3 uid="uid://cpf66xjmf73s2"]
 
 [ext_resource type="Script" uid="uid://v056aoy4bpko" path="res://scripts/GameController.gd" id="1_ol28g"]
 [ext_resource type="PackedScene" uid="uid://bvmbbrfiju5yu" path="res://scenes/game.tscn" id="2_f113r"]
+[ext_resource type="PackedScene" uid="uid://dgxsx1stsj8m5" path="res://scenes/shop.tscn" id="4_f113r"]
 [ext_resource type="PackedScene" uid="uid://csddwvmma3fsx" path="res://scenes/main_menu.tscn" id="12_0cupx"]
 
 [node name="GameController" type="Node"]
@@ -21,7 +22,11 @@ offset_bottom = 40.0
 
 [node name="MainMenu" parent="Control" instance=ExtResource("12_0cupx")]
 layout_mode = 0
-offset_left = 379.00003
-offset_top = 446.00006
-offset_right = 1147.0
-offset_bottom = 878.00006
+offset_left = 411.0
+offset_top = 560.0
+offset_right = 1179.0
+offset_bottom = 992.0
+rotation = 3.1415927
+
+[node name="Shop" parent="Control" instance=ExtResource("4_f113r")]
+layout_mode = 1

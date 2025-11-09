@@ -20,12 +20,17 @@ func change_gui_scene(new_scene: String, delete: bool = false, keep_running: boo
 	# Remove old GUI
 	if current_gui_scene != null:
 		if delete:
+			
 			current_gui_scene.queue_free()
 		elif keep_running:
+			
 			current_gui_scene.visible = false
+			print("loading new")
 		else:
+			
 			gui.remove_child(current_gui_scene)
-	
+	else:
+		print("erro!")
 	# Load and add new GUI
 	var new_scene_instance = load(new_scene).instantiate()
 	gui.add_child(new_scene_instance)
@@ -53,5 +58,5 @@ func change_2d_scene(new_scene: String, delete: bool = false, keep_running: bool
 	world_2d.add_child(new_instance)
 	current_2d_scene = new_instance
 	current_2d_scene.visible = true
-	
+	current_2d_scene.camera2d=true
 	print("Game scene loaded: ", new_scene)

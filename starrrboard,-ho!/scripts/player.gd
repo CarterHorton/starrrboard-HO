@@ -16,12 +16,13 @@ var cannonTimer = 1															#timer to switch the boolean
 
 #this function is how the actual cannonball if fired
 func _process(_delta):
-	if Input.is_action_pressed("shoot"):
-		if !shoot_cd:
-			shoot_cd=true
-			shoot_laser()
-			await get_tree().create_timer(1).timeout
-			shoot_cd=false
+	if Global.game_controller.gameStart == true:
+		if Input.is_action_pressed("shoot"):
+			if !shoot_cd:
+				shoot_cd=true
+				shoot_laser()
+				await get_tree().create_timer(cannonTimer).timeout
+				shoot_cd=false
  
 #this is how the ship moves
 func _physics_process(delta: float) -> void:
