@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cpf66xjmf73s2"]
+[gd_scene load_steps=13 format=3 uid="uid://cpf66xjmf73s2"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cs04s23q5dicv" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://3mklcukacxy8" path="res://assets/pictures/ScrapTexture2.png" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://hbpn0qhed63t" path="res://scenes/Pings/pingHub.tscn" id="6_kvpfn"]
 [ext_resource type="Script" uid="uid://cj4it1iguw2w0" path="res://scenes/game_manager.gd" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://gbw74s5apeyy" path="res://scenes/black_hole_inator.tscn" id="7_dinhu"]
 [ext_resource type="PackedScene" uid="uid://d2fskun5yn1e2" path="res://scenes/hub.tscn" id="9_0tnpc"]
 
 [node name="game" type="Node2D"]
@@ -43,6 +44,9 @@ text = "Current Value: 0$"
 position = Vector2(1, 2)
 
 [node name="Node2D" parent="player" instance=ExtResource("6_kvpfn")]
+
+[node name="Black-hole-inator" parent="player" instance=ExtResource("7_dinhu")]
+scaling = 3.0
 
 [node name="Scraps" type="Node2D" parent="."]
 

@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://gbw74s5apeyy"]
+[gd_scene load_steps=3 format=3 uid="uid://gbw74s5apeyy"]
+
+[ext_resource type="Script" uid="uid://xwjpssxrq0ee" path="res://scenes/blackHole.gd" id="1_dvavn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrgne"]
 radius = 40.0
 
-[node name="Black-hole-inator" type="Area2D"]
+[node name="Black-hole-inator" type="Area2D" groups=["blackHole"]]
+script = ExtResource("1_dvavn")
 metadata/_edit_vertical_guides_ = [40.0]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["blackHole"]]
 shape = SubResource("CircleShape2D_xrgne")
