@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgxsx1stsj8m5"]
+
+[ext_resource type="Texture2D" uid="uid://d0k4e64cb6bvv" path="res://assets/pictures/TempShop.png" id="1_lx5au"]
+[ext_resource type="Script" uid="uid://dtxeru1fmnb5m" path="res://scripts/shop.gd" id="1_xfvoa"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xfvoa")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(639.5, 361)
+scale = Vector2(0.66510415, 0.67222226)
+texture = ExtResource("1_lx5au")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 556.0
+offset_right = 1046.0
+offset_bottom = 616.0
+theme_override_constants/separation = 175
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Faster Fire Rate"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Faster Ship Speed"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Feed the Black Hole"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 595.0
+offset_top = 380.0
+offset_right = 740.0
+offset_bottom = 440.0
+theme_override_constants/separation = 175
+
+[node name="Button2" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Sell Scrap"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="scrap" type="Label" parent="Node"]
+offset_left = 602.0
+offset_top = 447.0
+offset_right = 662.0
+offset_bottom = 470.0
+
+[node name="fire" type="Label" parent="Node"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ship" type="Label" parent="Node"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="blackhole" type="Label" parent="Node"]
+offset_right = 40.0
+offset_bottom = 23.0
