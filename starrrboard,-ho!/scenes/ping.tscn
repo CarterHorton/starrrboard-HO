@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cotaeqdjxs5hk"]
 
-[ext_resource type="Script" uid="uid://dsj1g1738rxw5" path="res://ping.gd" id="1_uwmse"]
+[ext_resource type="Script" uid="uid://dsj1g1738rxw5" path="res://scripts/ping.gd" id="1_6ihqj"]
 [ext_resource type="Texture2D" uid="uid://6nxutljn6jjx" path="res://assets/pictures/Ping_Icon.png" id="2_6ihqj"]
 
 [node name="Ping" type="Area2D"]
-script = ExtResource("1_uwmse")
+script = ExtResource("1_6ihqj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2.3841858e-07, 1.1920929e-07)
