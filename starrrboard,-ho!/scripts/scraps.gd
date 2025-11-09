@@ -19,6 +19,11 @@ var timeoutFor:float = 5.0
 var hittable = true
 
 @onready var gameManager = %GameManager
+# blackHole Logic
+@onready var player = $"../../player"
+var inBlackHole = false
+# Pull in the game Character
+
 # ----- Variables ------
 var target: Vector2 # Refrence variable for where the peice is going
 var rng = RandomNumberGenerator.new() # OS time to create random ints
@@ -53,6 +58,8 @@ func moveToTarget(delta: float) -> void:
 
 # This function runs on every single frame and passes delta as time since last
 func _process(delta: float) -> void:
+	if inBlackHole:
+		target = player.global_position
 	moveToTarget(delta)
 
 # This detects for the player body to collide with scraps
@@ -63,8 +70,19 @@ func _on_body_entered(body: Node2D) -> void:
 		timer.start()
 		hittable = false
 		visible = false
+		
+# Tell the program that it is inside the blackhole
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("blackHole"):
+		inBlackHole = true
+		scrapSpeed = 400
+		target = player.global_position
 
+	
 func _on_timer_timeout() -> void:
+	# Full reset for respawning
+	inBlackHole = false
+	scrapSpeed = 40
 	hittable = true
 	visible = true
 	pickTarget()
