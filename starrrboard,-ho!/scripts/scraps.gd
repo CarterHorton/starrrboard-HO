@@ -36,7 +36,6 @@ func _on_ready() -> void:
 	rng.randomize() # Instanciate a random capture
 	pickTarget() # Pick a target to approach
 	global_position = target
-	pass # Replace with function body.
 
 # Move to new frame (RUN IN _process)
 func moveToTarget(delta: float) -> void:
@@ -60,14 +59,12 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if hittable:
 		gameManager.addPoint(scrapValue)
-		print("Dropkicking child")
 		timer.wait_time = timeoutFor
 		timer.start()
 		hittable = false
 		visible = false
 
 func _on_timer_timeout() -> void:
-	print("timer ran out")
 	hittable = true
 	visible = true
 	pickTarget()
