@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpq10lsr3g175"]
 
 [ext_resource type="Script" uid="uid://w0m3agahly1l" path="res://scripts/scraps.gd" id="1_vh33x"]
-[ext_resource type="Texture2D" uid="uid://bwrqkqx3vm210" path="res://assets/ScrapTexture3.png" id="2_vh33x"]
+[ext_resource type="Texture2D" uid="uid://bwrqkqx3vm210" path="res://assets/pictures/ScrapTexture3.png" id="2_vh33x"]
 
 [sub_resource type="GDScript" id="GDScript_vh33x"]
 script/source = "extends Sprite2D

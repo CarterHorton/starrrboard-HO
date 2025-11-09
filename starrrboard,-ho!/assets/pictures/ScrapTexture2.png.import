@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuk6uea5kniqo"
-path="res://.godot/imported/PlayerShip_Default.png-5d1b1bdbd379823e034aa3707f8f9500.ctex"
+uid="uid://3mklcukacxy8"
+path="res://.godot/imported/ScrapTexture2.png-4c5adb3b70d121a94dd053768fc3bda8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PlayerShip_Default.png"
-dest_files=["res://.godot/imported/PlayerShip_Default.png-5d1b1bdbd379823e034aa3707f8f9500.ctex"]
+source_file="res://assets/pictures/ScrapTexture2.png"
+dest_files=["res://.godot/imported/ScrapTexture2.png-4c5adb3b70d121a94dd053768fc3bda8.ctex"]
 
 [params]
 
