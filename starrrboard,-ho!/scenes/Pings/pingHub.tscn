@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://hbpn0qhed63t"]
+
+[ext_resource type="Script" uid="uid://1nw53c0cvroh" path="res://scripts/pingHub.gd" id="1_svlri"]
+[ext_resource type="Texture2D" uid="uid://cogq60kpwjbvg" path="res://assets/pictures/MainHub.png" id="2_bpb6s"]
+
+[node name="Node2D" type="Area2D"]
+script = ExtResource("1_svlri")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -9.536743e-07)
+scale = Vector2(0.04453125, 0.043981478)
+texture = ExtResource("2_bpb6s")

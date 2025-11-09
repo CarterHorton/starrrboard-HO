@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://vreyqjrywpio"]
+[gd_scene load_steps=3 format=3 uid="uid://d2fskun5yn1e2"]
 
 [ext_resource type="Script" uid="uid://bk0nqrcgn5k7g" path="res://scripts/hub.gd" id="1_d1od2"]
 [ext_resource type="Texture2D" uid="uid://cogq60kpwjbvg" path="res://assets/pictures/MainHub.png" id="1_qssp3"]
@@ -6,7 +6,7 @@
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_d1od2"]
 points = PackedVector2Array(344, 5, 343, -59, 176, -57, 173, -162, -160, -163, -154, -48, -315, -51, -319, 4, -155, 0, -156, 149, 174, 148, 175, -1)
 
-[node name="hub" type="Area2D"]
+[node name="hub" type="Area2D" groups=["Hub"]]
 collision_layer = 2
 collision_mask = 128
 script = ExtResource("1_d1od2")
