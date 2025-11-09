@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://cs04s23q5dicv"]
 
 [ext_resource type="Script" uid="uid://cnyvr5xqdv8je" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://cuk6uea5kniqo" path="res://assets/PlayerShip_Default.png" id="2_g2els"]
-[ext_resource type="Texture2D" uid="uid://haelgge0bdgm" path="res://assets/Better_Thruster_SpriteSheet.png" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://cuk6uea5kniqo" path="res://assets/pictures/PlayerShip_Default.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://haelgge0bdgm" path="res://assets/pictures/Better_Thruster_SpriteSheet.png" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("3_qhqgy")
@@ -54,6 +54,7 @@ radius = 7.0
 height = 34.0
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
+z_index = 20
 collision_layer = 128
 collision_mask = 9
 script = ExtResource("1_g2els")
