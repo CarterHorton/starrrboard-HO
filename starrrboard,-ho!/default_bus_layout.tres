@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://ngquqisn7o8y"]
+[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://lwphjakeppts"]
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
 resource_name = "Reverb"
@@ -31,5 +31,5 @@ bus/2/name = &"Sound Effects"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = 0.0
+bus/2/volume_db = 3.2424984
 bus/2/send = &"Master"

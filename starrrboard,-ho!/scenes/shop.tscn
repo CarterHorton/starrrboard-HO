@@ -1,0 +1,101 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgxsx1stsj8m5"]
+
+[ext_resource type="Texture2D" uid="uid://d0k4e64cb6bvv" path="res://assets/pictures/TempShop.png" id="1_lx5au"]
+[ext_resource type="Script" uid="uid://dtxeru1fmnb5m" path="res://scripts/shop.gd" id="1_xfvoa"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xfvoa")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(639.5, 361)
+scale = Vector2(0.66510415, 0.67222226)
+texture = ExtResource("1_lx5au")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 487.0
+offset_right = 1179.0
+offset_bottom = 547.0
+theme_override_constants/separation = 175
+
+[node name="fire" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Faster Fire Rate"
+
+[node name="ship" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Faster Ship Speed"
+
+[node name="blackhole" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Feed the Black Hole"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1170.0
+offset_top = 641.0
+offset_right = 1287.0
+offset_bottom = 710.0
+theme_override_constants/separation = 175
+
+[node name="exit" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.95, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.88, 0, 0, 0.5019608)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 44
+text = "EXIT"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="fire" type="Label" parent="Node"]
+offset_left = 240.0
+offset_top = 545.0
+offset_right = 280.0
+offset_bottom = 580.0
+theme_override_colors/font_outline_color = Color(0.05882353, 0.11372549, 0.33333334, 1)
+theme_override_constants/outline_size = 60
+theme_override_font_sizes/font_size = 25
+text = "5$"
+
+[node name="ship" type="Label" parent="Node"]
+offset_left = 618.0
+offset_top = 545.0
+offset_right = 658.0
+offset_bottom = 580.0
+theme_override_colors/font_outline_color = Color(0.05882353, 0.11372549, 0.33333334, 1)
+theme_override_constants/outline_size = 60
+theme_override_font_sizes/font_size = 25
+text = "5$"
+
+[node name="blackhole2" type="Label" parent="Node"]
+offset_left = 1041.0
+offset_top = 542.0
+offset_right = 1081.0
+offset_bottom = 577.0
+theme_override_colors/font_outline_color = Color(0.05882353, 0.11372549, 0.33333334, 1)
+theme_override_constants/outline_size = 60
+theme_override_font_sizes/font_size = 25
+text = "5$"
+
+[connection signal="pressed" from="HBoxContainer/fire" to="." method="_on_fire_pressed"]
+[connection signal="pressed" from="HBoxContainer/ship" to="." method="_on_ship_pressed"]
+[connection signal="pressed" from="HBoxContainer/blackhole" to="." method="_on_blackhole_pressed"]
+[connection signal="pressed" from="HBoxContainer2/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="HBoxContainer2/exit" to="." method="_on_button_2_pressed"]

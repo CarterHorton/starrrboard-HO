@@ -56,8 +56,9 @@ height = 34.0
 [node name="player" type="CharacterBody2D" groups=["player"]]
 z_index = 20
 collision_layer = 128
-collision_mask = 9
+collision_mask = 11
 script = ExtResource("1_g2els")
+metadata/_edit_horizontal_guides_ = [22.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -2.842171e-14)

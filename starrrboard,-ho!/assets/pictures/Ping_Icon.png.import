@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0mcchp6e65fj"
-path="res://.godot/imported/EnemyShip.png-39876fe4abe9156729c35b62a4b607e3.ctex"
+uid="uid://6nxutljn6jjx"
+path="res://.godot/imported/Ping_Icon.png-9c2c35455fac030f8f97b582fe708694.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EnemyShip.png"
-dest_files=["res://.godot/imported/EnemyShip.png-39876fe4abe9156729c35b62a4b607e3.ctex"]
+source_file="res://assets/pictures/Ping_Icon.png"
+dest_files=["res://.godot/imported/Ping_Icon.png-9c2c35455fac030f8f97b582fe708694.ctex"]
 
 [params]
 
