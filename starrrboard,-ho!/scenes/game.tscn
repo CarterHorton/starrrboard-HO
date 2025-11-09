@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cpf66xjmf73s2"]
+[gd_scene load_steps=10 format=3 uid="uid://cpf66xjmf73s2"]
 
 [ext_resource type="Script" uid="uid://cykq02oo3irg7" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cs04s23q5dicv" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bwrqkqx3vm210" path="res://assets/pictures/ScrapTexture3.png" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://3mklcukacxy8" path="res://assets/pictures/ScrapTexture2.png" id="5_p57ef"]
 [ext_resource type="Script" uid="uid://cj4it1iguw2w0" path="res://scenes/game_manager.gd" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://vreyqjrywpio" path="res://scenes/hub.tscn" id="9_0tnpc"]
 
 [node name="game" type="Node2D"]
 position = Vector2(642, 356)
@@ -76,3 +77,6 @@ scrapValue = 5
 custom_Texture = ExtResource("5_p57ef")
 
 [node name="lasers" type="Node" parent="."]
+
+[node name="Area2D" parent="." instance=ExtResource("9_0tnpc")]
+position = Vector2(-646, -338)

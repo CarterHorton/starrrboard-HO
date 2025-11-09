@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://vreyqjrywpio"]
+
+[ext_resource type="Texture2D" uid="uid://cogq60kpwjbvg" path="res://assets/pictures/MainHub.png" id="1_qssp3"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_d1od2"]
+points = PackedVector2Array(344, 5, 343, -59, 176, -57, 173, -162, -160, -163, -154, -48, -315, -51, -319, 4, -155, 0, -156, 149, 174, 148, 175, -1)
+
+[node name="hub" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -68)
+texture = ExtResource("1_qssp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_d1od2")
