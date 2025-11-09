@@ -26,27 +26,28 @@ func _process(_delta):
 #this is how the ship moves
 func _physics_process(delta: float) -> void:
 	#get input direction
-	var input_vector := Vector2(0,Input.get_axis("move_forward","move_backward"))
+	if Global.game_controller.gameStart == true:
+		var input_vector := Vector2(0,Input.get_axis("move_forward","move_backward"))
 	#apply it
-	velocity += input_vector.rotated(rotation)*acceleration
-	velocity = velocity.limit_length(max_speed)
+		velocity += input_vector.rotated(rotation)*acceleration
+		velocity = velocity.limit_length(max_speed)
 	
 	#used to play animation
-	if velocity:
-		thruster.speed_scale = velocity.length()/400
-		thruster.play("thrusting")
-	else:
-		thruster.play("idle")
+		if velocity:
+			thruster.speed_scale = velocity.length()/400
+			thruster.play("thrusting")
+		else:
+			thruster.play("idle")
 	#rotation for the camera
-	if Input.is_action_pressed("rotate_right"):
-		rotate(deg_to_rad(rotation_speed*delta))
-	if Input.is_action_pressed("rotate_left"):
-		rotate(deg_to_rad(-rotation_speed*delta))
-	if input_vector.y == 0:
-		velocity = velocity.move_toward(Vector2.ZERO,2)
+		if Input.is_action_pressed("rotate_right"):
+			rotate(deg_to_rad(rotation_speed*delta))
+		if Input.is_action_pressed("rotate_left"):
+			rotate(deg_to_rad(-rotation_speed*delta))
+		if input_vector.y == 0:
+			velocity = velocity.move_toward(Vector2.ZERO,2)
 	
 
-	move_and_slide()
+		move_and_slide()
 #the call to shoot the laser
 func shoot_laser():
 	var l = laser_scene.instantiate()

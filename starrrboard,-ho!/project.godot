@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Starrrboard, Ho!"
-run/main_scene="uid://csddwvmma3fsx"
+run/main_scene="uid://cpf66xjmf73s2"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 BackgroundMusic="res://scenes/background_music.tscn"
 MusicManager="*res://scenes/music_manager.tscn"
 GameManager="*res://scenes/game_manager.tscn"
+Global="*res://scripts/global.gd"
 
 [display]
 
