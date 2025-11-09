@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpf66xjmf73s2"]
+[gd_scene load_steps=11 format=3 uid="uid://bvmbbrfiju5yu"]
 
 [ext_resource type="Script" uid="uid://cykq02oo3irg7" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cs04s23q5dicv" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -21,7 +21,8 @@ script = ExtResource("1_u5sy4")
 position = Vector2(-642, -110)
 rotation = 3.1415927
 
-[node name="Label" type="Label" parent="player"]
+[node name="ScoreCard" type="Label" parent="player"]
+unique_name_in_owner = true
 offset_left = -623.0
 offset_top = -341.0
 offset_right = -431.0
