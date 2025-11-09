@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://cpf66xjmf73s2"]
+[gd_scene load_steps=9 format=3 uid="uid://cpf66xjmf73s2"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cs04s23q5dicv" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://dpnj4f8et0oia" path="res://assets/pictures/SpaceTexture.png" id="3_gee14"]
 [ext_resource type="PackedScene" uid="uid://cpq10lsr3g175" path="res://scenes/Scraps.tscn" id="3_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://6whstg5q2f0v" path="res://assets/ScrapTexture1.png" id="4_iywne"]
-[ext_resource type="Texture2D" uid="uid://bwrqkqx3vm210" path="res://assets/ScrapTexture3.png" id="5_iywne"]
-[ext_resource type="Texture2D" uid="uid://3mklcukacxy8" path="res://assets/ScrapTexture2.png" id="5_p57ef"]
+[ext_resource type="Texture2D" uid="uid://6whstg5q2f0v" path="res://assets/pictures/ScrapTexture1.png" id="4_iywne"]
+[ext_resource type="Texture2D" uid="uid://bwrqkqx3vm210" path="res://assets/pictures/ScrapTexture3.png" id="5_iywne"]
+[ext_resource type="Texture2D" uid="uid://3mklcukacxy8" path="res://assets/pictures/ScrapTexture2.png" id="5_p57ef"]
 [ext_resource type="Script" uid="uid://cj4it1iguw2w0" path="res://scenes/game_manager.gd" id="6_p57ef"]
 
 [node name="game" type="Node2D"]
@@ -16,14 +17,24 @@ script = ExtResource("1_u5sy4")
 unique_name_in_owner = true
 script = ExtResource("6_p57ef")
 
+[node name="Parallax2D" type="Parallax2D" parent="GameManager"]
+z_index = -50
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(648, 374)
+repeat_size = Vector2(1920, 1080)
+repeat_times = 13
+
+[node name="Sprite2D" type="Sprite2D" parent="GameManager/Parallax2D"]
+texture = ExtResource("3_gee14")
+
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 20
 
 [node name="Label" type="Label" parent="player"]
 offset_left = -623.0
 offset_top = -341.0
-offset_right = -404.0
-offset_bottom = -237.0
+offset_right = -431.0
+offset_bottom = -313.0
 text = "Current Value: 0$"
 
 [node name="Scraps" type="Node2D" parent="."]

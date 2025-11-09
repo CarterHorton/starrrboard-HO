@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3mklcukacxy8"
-path="res://.godot/imported/ScrapTexture2.png-4a3bd7bfd72c194d6fa2bd0ad069c63a.ctex"
+uid="uid://168xv5k1kpfa"
+path="res://.godot/imported/PlayerShip_Damage.png-d2b0a42773fdd736b486af44d8a7d952.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ScrapTexture2.png"
-dest_files=["res://.godot/imported/ScrapTexture2.png-4a3bd7bfd72c194d6fa2bd0ad069c63a.ctex"]
+source_file="res://assets/pictures/PlayerShip_Damage.png"
+dest_files=["res://.godot/imported/PlayerShip_Damage.png-d2b0a42773fdd736b486af44d8a7d952.ctex"]
 
 [params]
 

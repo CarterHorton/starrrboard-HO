@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjr1uaro5xamc"
-path="res://.godot/imported/CannonBall.png-80c2779d28f6e34c7743f4dadde08c5e.ctex"
+uid="uid://dpnj4f8et0oia"
+path="res://.godot/imported/SpaceTexture.png-aa868679db5e8812873d9c41927db7f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/CannonBall.png"
-dest_files=["res://.godot/imported/CannonBall.png-80c2779d28f6e34c7743f4dadde08c5e.ctex"]
+source_file="res://assets/pictures/SpaceTexture.png"
+dest_files=["res://.godot/imported/SpaceTexture.png-aa868679db5e8812873d9c41927db7f6.ctex"]
 
 [params]
 

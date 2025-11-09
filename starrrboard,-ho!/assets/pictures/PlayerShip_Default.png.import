@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://haelgge0bdgm"
-path="res://.godot/imported/Better_Thruster_SpriteSheet.png-c57e5aa4374f56cd72eed9203b484267.ctex"
+uid="uid://cuk6uea5kniqo"
+path="res://.godot/imported/PlayerShip_Default.png-8aae2ca570c26009afdc4edab77653ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Better_Thruster_SpriteSheet.png"
-dest_files=["res://.godot/imported/Better_Thruster_SpriteSheet.png-c57e5aa4374f56cd72eed9203b484267.ctex"]
+source_file="res://assets/pictures/PlayerShip_Default.png"
+dest_files=["res://.godot/imported/PlayerShip_Default.png-8aae2ca570c26009afdc4edab77653ea.ctex"]
 
 [params]
 
