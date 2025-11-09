@@ -58,8 +58,8 @@ shoot={
 
 [layer_names]
 
-2d_physics/layer_1="BackgroundFar"
-2d_physics/layer_2="BackgroundClose"
+2d_physics/layer_1="Background"
+2d_physics/layer_2="HQ"
 2d_physics/layer_3="Scraps"
 2d_physics/layer_4="Asteroids"
 2d_physics/layer_5="laser"
