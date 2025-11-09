@@ -97,5 +97,5 @@ text = "5$"
 [connection signal="pressed" from="HBoxContainer/fire" to="." method="_on_fire_pressed"]
 [connection signal="pressed" from="HBoxContainer/ship" to="." method="_on_ship_pressed"]
 [connection signal="pressed" from="HBoxContainer/blackhole" to="." method="_on_blackhole_pressed"]
-[connection signal="pressed" from="HBoxContainer2/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="HBoxContainer2/exit" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="HBoxContainer2/exit" to="." method="_on_exit_pressed"]
